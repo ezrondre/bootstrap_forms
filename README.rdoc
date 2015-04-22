@@ -1,3 +1,28 @@
 = BootstrapForms
 
 This project rocks and uses MIT-LICENSE.
+
+== Usage
+
+In your gemfile under bootstrap-sass:
+  gem 'bootstrap-forms'
+
+It does not depend on any bootstrap implementation, it is up to you to choose, but I seek best official boostrap-sass
+
+This gem implements a few helper methods and that is basicaly it.
+This methods are:
+
+  bootstrap_form_for
+
+makes a default form_for, but with a bootstrap form builder, additionaly renders an labels for you (this has a way to turn off, but it is quite a hidden so TODO :) ).
+takes a few parameters:
+  label_style(label, placeholder, both) - defaults to both
+
+
+  bootstrap_flash
+
+renders an flash messages by an bootstrap way, takes an array of messages, if leave out, defaults to flash messages
+
+  error_messages_for
+
+renders an object messages takes an ActiveRecord::Base ( or any object responding to errrors method returning an Errors object) or ActiveRecord::Errors
